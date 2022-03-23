@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('barangs', function (Blueprint $table) {
-            //
+            $table->integer('lemari_id')->after('id');
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('barangs', function (Blueprint $table) {
-            //
+            $table->dropColumn('lemari_id');
         });
     }
 };
